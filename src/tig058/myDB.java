@@ -14,7 +14,7 @@ public class myDB {
 	ResultSet rs;
        public enum MODE {SELECT, INSERT};
     public static ResultSet kopplaDb(String query, MODE mode)  throws SQLException{
-             public Connection createConnection() {
+            // public Connection createConnection() {
 		Connection localConn = null;
 		try { 
 	    Class.forName("org.sqlite.JDBC"); //Sqlite-drivrutin
@@ -41,6 +41,7 @@ public class myDB {
 
 	return localConn;
 }
+
 
 public Statement myCreateStatement(Connection c) {
 	Statement s = null;

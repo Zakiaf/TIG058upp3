@@ -284,13 +284,14 @@ public class Search extends javax.swing.JFrame {
         String n1 = searchFamilyNameTextField.getText();
         
         if (n1.equals("Efternamn") || n1.equals("")) {
-        JOptionPane.showMessageDialog(null,"OBS!Ange efternamn som du vill söka på!");
+        JOptionPane.showMessageDialog(null,"OBS! Ange efternamn som du vill söka på!");
         
         } else if (!n1.equals("")){
         String query = "SELECT * FROM medlem where familyName = '" + n1 + "'";
        // System.out.println("sql:   " + query);
         String svar = test.infoExists(query);
         System.out.println(svar);
+        setVisible(false);
         
         /*String n1 = searchFamilyNameTextField.getText();
         String query = "SELECT familyName FROM medlem where familyName = '" + n1 + "'";
